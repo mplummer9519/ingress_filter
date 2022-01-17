@@ -1,6 +1,11 @@
 # This is to gather the hit rate from a EDR Server
 #
 #-------------------------------------------------
+#
+# New Information has been added
+#
+#--------------------------------------------------
+
 from http.client import responses
 import re
 import requests
