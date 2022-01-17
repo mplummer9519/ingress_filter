@@ -5,5 +5,5 @@ app = Flask(__name__)
 
 @app.rout("/hit_rate")
 def index():
-    print("Congrats its a web app")
+    return "Congrats its a web app"
 
