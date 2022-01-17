@@ -3,7 +3,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/hit_rate")
+@app.route("/")
 def index():
     return "Congrats its a web app"
 
