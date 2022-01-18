@@ -8,9 +8,9 @@ app = Flask(__name__)
 #    return "Congrats its a web app"
 
 @app.route("/")
-def GetIngressFilterData(filter_name):
+def GetIngressFilterData():
     headers={"X-Auth-Token":"6cc3c907948d4ca3e92416067c08bc7fa57c7125"}
-    ingress_url="https://192.168.2.134/api/v1/ingress_whitelist/SvchostFilter" + filter_name
+    ingress_url="https://192.168.2.134/api/v1/ingress_whitelist/SvchostFilter"
     responses = requests.get(ingress_url,headers=headers,verify=False)        
     data = json.loads(responses.text)
     hit_rate_current = " "
