@@ -22,7 +22,9 @@ def GetIngressFilterData(filter_name):
     hit_rate_current = " "
     if responses.status_code == 200:
        hit_rate_current = data['hit_rate']
-   return hit_rate_current
+       return str(hit_rate_current)
+
+
    
 
 
