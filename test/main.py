@@ -1,3 +1,4 @@
+import re
 import requests
 import json
 from flask import Flask
@@ -19,6 +20,12 @@ def GetIngressFilterData():
     if responses.status_code == 200:
        hit_rate_current = data['hit_rate']
        return str(hit_rate_current)
+
+@app.route("/name")
+def name():
+    first_name = requests.args.get("firstname")
+    return str(first_name)
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=True)
