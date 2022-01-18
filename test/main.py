@@ -1,7 +1,8 @@
-import re
+
 import requests
 import json
 from flask import Flask
+from flask import request
 
 
 app = Flask(__name__)
@@ -23,7 +24,7 @@ def GetIngressFilterData():
 
 @app.route("/name")
 def name():
-    first_name = requests.args.get("firstname")
+    first_name = request.args.get("firstname")
     return str(first_name)
 
 
