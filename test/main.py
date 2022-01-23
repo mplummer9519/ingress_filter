@@ -33,6 +33,10 @@ def name():
 def webpage():
     return render_template('test.html')
 
+@app.route("/user_agent")
+def UserAgent():
+    user_agent = request.headers.get('User_Agent')
+    return '<p>Your Browser is {}</p>'.format(user_agent)
 
 
 
