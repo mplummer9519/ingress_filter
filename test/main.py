@@ -39,7 +39,9 @@ def UserAgent():
     user_agent = request.headers.get('User_Agent')
     ref_var = request.headers.get('Referer')
     return '<p>Your Browser is {}</p>'.format(user_agent)
-    return '<p>The referer is {}</p>'.format(ref_var)
+
+
+    
 
 
 
