@@ -37,7 +37,7 @@ def webpage():
 @app.route("/user_agent")
 def UserAgent():
     user_agent = request.headers.get('User_Agent')
-    ref_var = request.headers.get('Referer')
+    #ref_var = request.headers.get('Referer')
     return '<p>Your Browser is {}</p>'.format(user_agent)
 
 
